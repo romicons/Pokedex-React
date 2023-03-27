@@ -6,11 +6,11 @@ const Pagination = (props) => {
 return (
     <div className="pagination">
         <button onClick={onLeftClick}>
-            <div>flecha izquierda</div>
+            <div>⬅️</div>
             </button>
         <div>{page} de {totalPages}</div>
         <button onClick={onRightClick}>
-            <div>flecha derecha</div>
+            <div>➡️</div>
             </button>
     </div>
 );

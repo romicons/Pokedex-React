@@ -36,13 +36,22 @@ export default function App () {
   [page]);
 
   const updateFavouritePokemons = (name) => {
-    console.log(name);
-  }
+    const updated = [...favourites];
+    const isFavourite = updated.indexOf(name);
+    if (isFavourite >= 0) {
+      updated.splice(isFavourite, 1);
+    }
+    else {
+      updated.push(name);
+    }
+    setFavourites(updated);
+  };
+
   return (
     <FavouriteProvider 
     value={{
       favouritePokemons: favourites, 
-      updateFavouritesPokemons: updateFavouritePokemons
+      updateFavouritePokemons: updateFavouritePokemons
     }} 
     >
     <div>
