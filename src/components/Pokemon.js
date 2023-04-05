@@ -12,6 +12,7 @@ const Pokemon = (props) => {
         e.preventDefault();
         updateFavouritePokemons(pokemon.name);
     };
+    
     return (
         <div className="pokemon-card">
             <div className="pokemon-img-container">
